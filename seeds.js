@@ -1,6 +1,7 @@
 var mongoose    = require('mongoose'),
     Contact     = require('./models/contact.js'),
     Member      = require('./models/member'),
+    Admin       = require('./models/admin'),
     contactdata        = [{
         email: "snethi@uncc.edu",
         relationship: "Parent",
@@ -73,8 +74,25 @@ var mongoose    = require('mongoose'),
             });
      }
     });
+    Admin.remove({},function(err){
+      if(err){
+          console.log("error");
+      } 
+     else{
+          console.log("Removed all admins");
+            var admin  = new Admin({username: 'ByronRuff'});
+            var password = 'univsports2018';
+            Admin.register(admin, password, function(err, admin){
+            if(err){
+                console.log(err);
+             }
+             else{
+                 console.log(admin);
+             }
+     });
     
 }
     //Adding comments
-
+});
+}
 module.exports = seedDB;

@@ -45,13 +45,25 @@
             </nav>
         </div>
         
+        <div class="container">
+                <% if(success && success.length>0){ %>
+                <div class="alert alert-success" role="alert">
+                    <%= success %>
+                </div>
+                <% } %>
+                <% if(error && error.length>0){ %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+                <% } %>
+            </div>
 <!----------------Header Section------------------>
-        <header>
-            <ul class="slideshow">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-        </header>
+        <!--<header>-->
+        <!--    <ul class="slideshow">-->
+        <!--      <li></li>-->
+        <!--      <li></li>-->
+        <!--      <li></li>-->
+        <!--      <li></li>-->
+        <!--      <li></li>-->
+        <!--    </ul>-->
+        <!--</header>-->

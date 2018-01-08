@@ -309,9 +309,15 @@ header {
         z-index: 9999;
     }
     
+    .know-more {
+        width: 250px;
+        text-align: center;
+        margin: 20px 0 40px 0;
+    }
+    
     h3 {
         color: #fff;
-        text-shadow: 0 1px 1px #efefef;
+        text-shadow: 0 1px 1px #555;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -320,7 +326,7 @@ header {
     }
     
     .sports {
-        background-image: url(../media/img/sports.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../media/img/sports.jpg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: left;
@@ -332,13 +338,18 @@ header {
     
     .pgm {
         @extend .sports;
-        background-image: url(../media/img/pgm.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../media/img/pgm.jpg);
     }
     
     .fitness {
         @extend .sports;
-        background-image: url(../media/img/fitness.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../media/img/fitness.jpg);
     }
+    
+    ul {
+            list-style: none;
+            padding: 30px;
+        }
     
 }
 
@@ -459,6 +470,14 @@ header {
     }
 }
 
+/*---------------------------------*/
+/*----------Testimonials-----------*/
+/*---------------------------------*/
+
+.section-testimonials {
+    background-color: #f4f4f4;
+    height: 100vh;
+}
 
 /*---------------------------------*/
 /*--------------Footer-------------*/

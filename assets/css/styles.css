@@ -234,9 +234,14 @@ header {
 .section-services .modal-dialog {
   z-index: 9999; }
 
+.section-services .know-more {
+  width: 250px;
+  text-align: center;
+  margin: 20px 0 40px 0; }
+
 .section-services h3 {
   color: #fff;
-  text-shadow: 0 1px 1px #efefef;
+  text-shadow: 0 1px 1px #555;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -244,7 +249,7 @@ header {
   margin: 0 auto; }
 
 .section-services .sports, .section-services .pgm, .section-services .fitness {
-  background-image: url(../media/img/sports.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/img/sports.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
@@ -254,10 +259,14 @@ header {
   position: relative; }
 
 .section-services .pgm {
-  background-image: url(../media/img/pgm.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/img/pgm.jpg); }
 
 .section-services .fitness {
-  background-image: url(../media/img/fitness.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/img/fitness.jpg); }
+
+.section-services ul {
+  list-style: none;
+  padding: 30px; }
 
 .space {
   margin-bottom: 80px; }
@@ -331,6 +340,13 @@ header {
 
 .section-mission-vision .our-mission-vision-content {
   margin: 40px auto 80px auto; }
+
+/*---------------------------------*/
+/*----------Testimonials-----------*/
+/*---------------------------------*/
+.section-testimonials {
+  background-color: #f4f4f4;
+  height: 100vh; }
 
 /*---------------------------------*/
 /*--------------Footer-------------*/
