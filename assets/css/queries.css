@@ -1,0 +1,41 @@
+/*---------------------------------*/
+/*--------Website Colors-----------*/
+/*---------------------------------*/
+@media only screen and (max-width: 767px) {
+  /*---Navbar background---*/
+  .navbar-collapse {
+    background-color: #fff; }
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    border: 0; }
+  .main-nav li a:hover,
+  .main-nav li a:active,
+  .sticky .main-nav li a:hover,
+  .sticky .main-nav li a:active {
+    color: #4ebfe5; }
+  .main-nav li:hover,
+  .main-nav li:active {
+    border: 0; }
+  .landing-header {
+    top: 50%; }
+    .landing-header h1 {
+      font-size: 200%; }
+  .section-byron-ruff h2 {
+    margin: 10px auto; }
+  .section-byron-ruff .content {
+    margin: 20px auto 0 auto;
+    padding: 0 30px; }
+  .section-mission-vision h2 {
+    margin: 10px 0; }
+  .section-mission-vision .our-mission-vision-content {
+    margin: 20px auto 40px auto;
+    padding: 0 30px; }
+  .contact-us h2 {
+    margin: 20px auto; }
+  .footer-social {
+    border: none;
+    text-align: center;
+    margin-bottom: 30px; }
+  .footer-location {
+    padding: auto;
+    text-align: center; } }

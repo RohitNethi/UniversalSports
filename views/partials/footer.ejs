@@ -1,0 +1,75 @@
+
+<!--Footer goes here-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2 contact-us">
+                <div class="row">
+                    <div class="col-10 offset-1">
+                        <h2>Drop us a line!</h2>
+                        <form id="contact-form" action="/contact" method="POST">
+                            <div class="row uppercase">
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" name="person[email]">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="relationship">Relationship</label>
+                                    <select class="form-control" id="relationship" name="person[relationship]">
+                                      <option>Parent</option>
+                                      <option>Guardian</option>
+                                      <option>Self</option>
+                                      <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="3" name="person[message]"></textarea>
+                                <button type="submit" class="btn btn-default">Submit!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer-content col-md-6 offset-md-3">
+                <div class="row">
+                    <div class="footer-social col-md-6">
+                        <h4>Universal Sports LLC</h4><br>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/universalsportsllc/?hl=en" target="_blank"><i class="ion-social-instagram"></i></a>
+                            <a href="https://twitter.com/byronruff" target="_blank"><i class="ion-social-twitter"></i></a>
+                            <a href="https://www.facebook.com/Universal-Sports-LLC-696311587208445/" target="_blank"><i class="ion-social-facebook"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-location col-md-6">
+                        Email<br>
+                        Phone Number<br>
+                        Charlotte, NC
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+<!--------------------Scripts--------------------->  
+        <!--Jquery-->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <!--Waypoints-->
+        <script src="scripts/jquery.waypoints.min.js"></script>
+        <!--Modernizer-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+        <!--Bootstrap-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <!--Script.js-->
+        <script src="scripts/script.js"></script>
+        <!--App.js-->
+        <script src="app.js"></script>
+        
+</body>
+</html>

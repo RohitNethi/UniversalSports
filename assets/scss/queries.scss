@@ -1,0 +1,90 @@
+/*---------------------------------*/
+/*--------Website Colors-----------*/
+/*---------------------------------*/
+
+$logo-red: #d0252a;
+$logo-blue: #4ebfe5;
+$logo-dark: #231f20;
+$logo-grey: #c2c2c2;
+$logo-light: #e3e4e5;
+$logo-lame: #e224e5;
+
+
+@media only screen and (max-width:767px) {
+    
+/*---Navbar background---*/
+
+    .navbar-collapse {
+        background-color: #fff; 
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited,{
+        border: 0;
+    }
+    .main-nav li a:hover,    
+    .main-nav li a:active,
+    .sticky .main-nav li a:hover,    
+    .sticky .main-nav li a:active{
+        color: $logo-blue;
+    }
+    
+    .main-nav li:hover,
+    .main-nav li:active {
+        border: 0;
+    }
+    
+// Landing Header
+
+    .landing-header {
+        top: 50%;
+        
+        h1 {
+            font-size: 200%;
+        }
+    }
+    
+        
+//    About Us
+    .section-byron-ruff {
+        h2{
+            margin: 10px auto;
+        }
+        .content {
+            margin: 20px auto 0 auto;;
+            padding: 0 30px;
+        }
+    }
+    
+    .section-mission-vision {
+        h2 {
+            margin: 10px 0;
+        }
+        .our-mission-vision-content{            
+            margin: 20px auto 40px auto;
+            padding: 0 30px;
+        }
+    }
+    
+//    Footer
+    
+    .contact-us {
+        h2 {
+            margin: 20px auto;
+        }
+    }
+    
+    .footer-social {
+        border: none;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-location {
+        padding: auto;
+        text-align: center;
+    }
+
+}
+
+

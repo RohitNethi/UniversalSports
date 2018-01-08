@@ -1,0 +1,167 @@
+<% include partials/header %>
+    
+    <!------------------Form Section------------------>
+        <section class="section-health-form">
+            <div class="row">
+                <form class="health-form col-md-8 offset-md-2" id="id-health-form">
+                    <h2>MEDICAL HISTORY AND SCREENING FORM</h2>                    
+                    <h3>General Information</h3>
+                    
+<!--Participant:-->
+                    <h4>Participant:</h4>
+                    <div class="form-group row participant">
+                        <label for="participant_name" class="col-2 col-form-label">Name</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="FirstName LastName" id="participant_name">
+                        </div>
+                        <br><br>
+                        <label for="participant_address" class="col-2 col-form-label">Address</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="Street Address, Apt No., City, State, Zip Code" id="participant_address">
+                        </div>
+                        <br><br>
+                        <label for="participant_telephone" class="col-2 col-form-label">Phone number</label>
+                        <div class="col-10">
+                            <input class="form-control" type="tel" value="(555)-555-5555" id="participant_telephone">
+                        </div>
+                        <br><br>
+                        <label for="participant_birth" class="col-2 col-form-label">Birth date</label>
+                        <div class="col-10">
+                            <input class="form-control" type="date" id="participant_birth">
+                        </div>
+                    </div>  
+                    
+<!--Family Physician and/or Primary Health Care Provider:-->
+                    <h4>Family Physician and/or Primary Health Care Provider:</h4>
+                    <div class="form-gorup row php">
+                        <label for="doctor_name" class="col-2">Doctor/Other</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="FirstName LastName" id="doctor_name">
+                        </div>
+                        <br><br>
+                        <label for="doctor_phone" class="col-2">Phone</label>
+                        <div class="col-10">
+                            <input class="form-control" type="tel" value="(555)-555-5555" id="doctor_phone">
+                        </div>
+                        <br><br>
+                        <label for="doctor_address" class="col-2">Address</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="Street Address, Apt No., City, State, Zip Code" id="doctor_address">
+                        </div>
+                        <br><br>
+                        <label for="doctor_city" class="col-2">City</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="City" id="doctor_city">
+                        </div>
+                        <br><br>
+                    </div>
+                    <fieldset class="form-group">
+                        <legend>May I send a copy of your consultation to your physician or primary health care provider and consult with them as necessary?</legend>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="consult" id="consult_yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="consult" id="consult_no">
+                                No
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-group row">
+                        <label for="signature" class="col-2">Signature</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" value="Type your name" id="signature">
+                        </div>
+                    </div>
+<!--Marital Status:-->
+                    <h4>Marital Status:</h4>
+                    <fieldset class="form-group">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="marital_status" id="single">
+                                Single
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="marital_status" id="married">
+                                Married
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="marital_status" id="divorced">
+                                Divorced
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="marital_status" id="widowed">
+                                Widowed
+                            </label>
+                        </div>
+                    </fieldset>
+
+<!--Marital Status:-->
+                    <h4>Sex:</h4>
+                    <fieldset class="form-group">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="sex" id="male">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="sex" id="female">
+                                Female
+                            </label>
+                        </div>
+                    </fieldset>
+                    
+<!--Education:-->
+                    <h4>Education:</h4>
+                    <fieldset class="form-group">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="education" id="grade_school">
+                                Grade School
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="marital_status" id="junior_high">
+                                Jr. High School
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="marital_status" id="high_school">
+                                High School
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="marital_status" id="college">
+                                College (2 - 4 years)
+                            </label>
+                        </div>
+                    </fieldset>
+<!--Sports-->
+                    <h4>Sport(s):</h4>
+                    <div class="form-group row">
+                        <label for="position" class="col-2 col-form-label">
+                        Position
+                        </label>
+                        <div class="col-10">
+                            <input type="text" class="form-control" id="sports">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+<% include partials/footer %>
