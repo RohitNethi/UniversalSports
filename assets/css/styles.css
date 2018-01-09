@@ -268,14 +268,33 @@ header {
   list-style: none;
   padding: 30px; }
 
+.section-testimonials {
+  background-color: #f8f8f8; }
+
 .space {
   margin-bottom: 80px; }
 
 /*---------------------------------*/
 /*--------About Us Stylesheet------*/
 /*---------------------------------*/
+.about-header {
+  height: 50vh;
+  width: 100%;
+  z-index: 0;
+  margin-top: -80px;
+  padding-top: 80px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/bg/football.jpg);
+  background-position: bottom;
+  background-attachment: fixed; }
+  .about-header h1 {
+    font-size: 68px;
+    margin-top: 5%;
+    color: #fff;
+    text-shadow: 0 1px 1px #000;
+    text-transform: none; }
+
 .about-us {
-  background-image: url(/media/bg/gplaypattern_@2X.png);
+  background-image: url(../media/bg/gplaypattern_@2X.png);
   background-attachment: fixed; }
   .about-us h2 {
     margin: 30px auto; }
@@ -344,8 +363,10 @@ header {
 /*---------------------------------*/
 /*----------Testimonials-----------*/
 /*---------------------------------*/
-.section-testimonials {
-  background-color: #f4f4f4;
+/*---------------------------------*/
+/*----------Subscription-----------*/
+/*---------------------------------*/
+.section-subscription {
   height: 100vh; }
 
 /*---------------------------------*/
@@ -364,6 +385,13 @@ footer {
   .contact-us h2 {
     margin: 30px auto;
     text-align: center; }
+  .contact-us .submit-button {
+    position: relative; }
+  .contact-us button {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translateY(-50%); }
 
 .footer-content {
   padding-top: 30px;

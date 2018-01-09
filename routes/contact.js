@@ -4,7 +4,7 @@ var express     = require('express'),
     middleware  = require('../middleware/middleware'),
     Contact     = require('../models/contact');
 
-router.post("/contact", function(req,res){
+router.post("/", function(req,res){
     var contact = {
         email: req.body.person.email,
         relationship: req.body.person.relationship,

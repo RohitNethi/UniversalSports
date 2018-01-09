@@ -1,5 +1,4 @@
 //Server Setup
-
 var express         = require("express"),
     bodyParser      = require("body-parser"),
     mongoose        = require('mongoose'),
@@ -10,6 +9,7 @@ var express         = require("express"),
     flash           = require('connect-flash'),
     passport        = require('passport'),
     seedDB          = require('./seeds'),
+    sanitizer       = require('express-sanitizer'),
     LocalStrategy   = require('passport-local'),
     transporter     = require('./middleware/middleware');
 
@@ -24,6 +24,7 @@ app.use(require('express-session')({
     saveUninitialized : false
 }));
 
+app.use(sanitizer());
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(Admin.authenticate()));
@@ -52,11 +53,15 @@ app.get("/about", function(req,res){
 
 
 //Routes 
-var contactRoutes = require('./routes/contact');
-app.use("/", contactRoutes);
+var contactRoutes = require('./routes/contact'),
+    trendingRoutes = require('./routes/shoutout'),
+    adminRoutes = require('./routes/admin');
 
-var adminRoutes = require('./routes/admin');
+
+app.use("/contact", contactRoutes);
 app.use("/admin", adminRoutes);
+app.use("/shoutout", trendingRoutes);
+
 
 //Listen
 app.listen(process.env.PORT, process.env.IP, function(){
