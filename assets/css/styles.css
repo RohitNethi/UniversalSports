@@ -32,8 +32,18 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 40px;
-  text-transform: uppercase; }
+  font-size: 40px; }
+
+section:hover h2:after {
+  animation: growlength 1s ease-in forwards; }
+
+@keyframes growlength {
+  0% {
+    width: 100px; }
+  50% {
+    width: 50px; }
+  100% {
+    width: 200px; } }
 
 h3 {
   font-size: 30px; }
@@ -73,8 +83,7 @@ h4 {
   margin: 10px 40px 10px 0px;
   font-family: "Raleway", sans-serif;
   font-size: 150%;
-  font-weight: 100;
-  text-transform: uppercase; }
+  font-weight: 100; }
 
 .main-nav li a:link,
 .main-nav li a:visited {
@@ -104,6 +113,14 @@ h4 {
   z-index: 999;
   height: 60px; }
 
+.sticky .navbar-brand:after {
+  margin: 10px auto 10px 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 120%;
+  font-weight: 100;
+  content: "Universal Sports";
+  color: #000; }
+
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
   color: #000; }
@@ -130,7 +147,8 @@ header {
   height: 100vh;
   position: relative;
   z-index: -1;
-  background-color: #231f20; }
+  background-color: #231f20;
+  margin-top: 3px; }
 
 .landing-header {
   position: absolute;
@@ -269,7 +287,70 @@ header {
   padding: 30px; }
 
 .section-testimonials {
-  background-color: #f8f8f8; }
+  margin-top: 30px;
+  padding: 30px auto;
+  background-color: #f8f8f8;
+  background-image: url(../media/bg/baseball-1.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom; }
+  .section-testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    color: #fff;
+    text-shadow: 0 1px 1px #000; }
+  .section-testimonials h2:after {
+    display: block;
+    height: 2px;
+    background-color: #4ebfe5;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px; }
+  .section-testimonials blockquote {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 6%;
+    margin-bottom: 60px; }
+  .section-testimonials cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block; }
+  .section-testimonials cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle; }
+
+.section-subscription h2 {
+  text-align: center;
+  margin: 30px auto; }
+
+.section-subscription h2:after {
+  display: block;
+  height: 2px;
+  background-color: #4ebfe5;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px; }
+
+.section-subscription .sub {
+  padding: 30px;
+  text-align: center; }
+  .section-subscription .sub i {
+    font-size: 40px; }
+  .section-subscription .sub h3:after {
+    display: block;
+    height: 2px;
+    background-color: #4ebfe5;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px; }
+
+.section-subscription .pay {
+  text-align: center;
+  margin-top: 30px; }
 
 .space {
   margin-bottom: 80px; }
@@ -281,7 +362,7 @@ header {
   height: 50vh;
   width: 100%;
   z-index: 0;
-  margin-top: -80px;
+  margin: -80px 0 auto 0;
   padding-top: 80px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/bg/football.jpg);
   background-position: bottom;
@@ -293,10 +374,10 @@ header {
     text-shadow: 0 1px 1px #000;
     text-transform: none; }
 
-.about-us {
+.about-us, .trending-container {
   background-image: url(../media/bg/gplaypattern_@2X.png);
   background-attachment: fixed; }
-  .about-us h2 {
+  .about-us h2, .trending-container h2 {
     margin: 30px auto; }
 
 .section-byron-ruff {
@@ -361,12 +442,9 @@ header {
   margin: 40px auto 80px auto; }
 
 /*---------------------------------*/
-/*----------Testimonials-----------*/
+/*--------Trending Stylesheet------*/
 /*---------------------------------*/
-/*---------------------------------*/
-/*----------Subscription-----------*/
-/*---------------------------------*/
-.section-subscription {
+.trending-container {
   height: 100vh; }
 
 /*---------------------------------*/
@@ -381,7 +459,8 @@ footer {
   background-color: #4ebfe5;
   margin-top: -5%;
   box-shadow: 0 2px 6px #555;
-  font-weight: 500; }
+  font-weight: 500;
+  padding-bottom: 30px; }
   .contact-us h2 {
     margin: 30px auto;
     text-align: center; }
@@ -400,6 +479,8 @@ footer {
 .footer-social {
   border-right: 4px solid #555;
   text-align: center; }
+  .footer-social h4 {
+    margin: 5px auto 0 auto; }
   .footer-social .social-links li a:link,
   .footer-social .social-links li a:visited {
     text-decoration: none;
@@ -425,4 +506,16 @@ footer {
     color: #517fa4; }
 
 .footer-location {
-  padding-left: 40px; }
+  padding-left: 20px; }
+  .footer-location a {
+    margin-bottom: 40px; }
+  .footer-location a:link,
+  .footer-location a:visited {
+    text-decoration: none;
+    color: #fff; }
+  .footer-location a:hover,
+  .footer-location a:active {
+    color: #4ebfe5; }
+  .footer-location i {
+    font-size: 150%;
+    margin-right: 10px; }

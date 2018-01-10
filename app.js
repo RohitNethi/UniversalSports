@@ -42,7 +42,12 @@ app.use(function(req,res,next){
 
 seedDB();
 //Routes
+
 app.get("/", function(req,res){
+   res.render("index");
+});
+
+app.get("/index", function(req,res){
    res.render("index");
 });
 
@@ -54,13 +59,13 @@ app.get("/about", function(req,res){
 
 //Routes 
 var contactRoutes = require('./routes/contact'),
-    trendingRoutes = require('./routes/shoutout'),
-    adminRoutes = require('./routes/admin');
+    trendingRoutes = require('./routes/trending');
+    //adminRoutes = require('./routes/admin');
 
 
 app.use("/contact", contactRoutes);
-app.use("/admin", adminRoutes);
-app.use("/shoutout", trendingRoutes);
+//app.use("/admin", adminRoutes);
+app.use("/trending", trendingRoutes);
 
 
 //Listen

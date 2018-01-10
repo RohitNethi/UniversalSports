@@ -157,14 +157,103 @@
     </div>
 <!-----------------Testimonials---------------------->
   <section class="section-testimonials">
-    <div class="testimonials" id="id-testimonials">
-      <h2>What people are saying about us</h2>
+    <div class="testimonials container" id="id-testimonials">
+      <h2>Success Stories</h2>
+      <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active row">
+            <div class="col-8 offset-2">
+              <blockquote>
+                I say with great conviction that Mr. Ruff has no doubt impacted my son’s life. 
+                Mr. Ruff is very relevant today in the lives of the young men that he encounters
+                . Because of Mr. Ruff’s influence, my son continues to show positive growth and 
+                maturity, and he is extremely motivated and passionate about excelling in the next
+                phase of his life.
+                <cite><img class="cite-img">&mdash; Dale B. Gordon</cite>
+              </blockquote>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-8 offset-2 row">
+              <blockquote>
+                What I appreciate most about Byron is that he truly cares about the young men 
+                that he trains and mentors. He makes himself available and checks in with them 
+                regularly via phone and email. He also keeps in contact with the parents, checking 
+                in on grades, and how the young men are doing in general.
+                <cite><img class="cite-img">&mdash; Kirk Augustus</cite>
+              </blockquote>
+            </div>
+          </div>
+          <div class="carousel-item row">
+            <div class="col-8 offset-2">
+              <blockquote>
+                I am glad to say that a few weeks ago that my son signed a D-1 national letter of 
+                intent with Byron right there by his side. He has been patient but challenging. He has pushed my son and
+                called him out on things as well. This man is solid and has a great track
+                record when it comes to working with student athletes.
+                <cite><img class="cite-img">&mdash; Dr. Ernest E. Jeffries</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
   </section>
 
 <!-----------------Subscription---------------------->
     <section class="section-subscription">
-      
+      <div class="subscription container" id="id-subscription">
+        <h2>Join Universal Sports</h2>
+        <div class="row">
+          <div class="col-md-3 offset-md-3 sub">
+            <h3><i class="ion-ios-people"></i></h3>
+            <p>Looking for a Sports Performance Trainer? Start your training today! </p>
+            <button type="button" class="btn btn-primary join" data-toggle="modal" data-target="#join">
+              Join now!
+            </button>
+          </div>
+          <div class="modal fade" id="join" tabindex="-1" role="dialog" aria-labelledby="Join Now" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="join">Join Now!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Request more information on how to join by by emailing <a href="mailto:universalsportsllc@gmail.com" 
+                    target="_blank">universalsportsllc@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3  sub">
+            <h3>
+              <!-- PayPal Logo -->
+              <img src="/media/favicons/paypal.jpg" border="0" alt="PayPal Logo">
+            </h3>
+            <p>To better serve our clients, we now accept payments online.</p>
+            <button type="button" class="btn btn-primary pay" href="#">
+              Make a payment
+            </button>
+          </div>
+          
+        </div>
+      </div>
     </section>
 
 <!-----------------Instagram---------------------->

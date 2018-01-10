@@ -3,6 +3,7 @@ var express     = require('express'),
     router      = express.Router(),
     Admin       = require('../models/admin'),
     Member      = require('../models/member'),
+    Shoutout    = require('../models/shoutout'),
     middleware  = require('../middleware/middleware');
     
 
@@ -31,6 +32,7 @@ router.get("/logout", function(req,res){
     res.redirect("/");
 });
 
+
 router.get("/members", middleware.isLoggedIn, function(req,res){
     Member.find({},function(err,members){
         if(err){
@@ -42,5 +44,18 @@ router.get("/members", middleware.isLoggedIn, function(req,res){
     })
     
 });
+
+//Trending 
+
+
+//Edit form for modifying trending post - Admin only
+router.get("/shoutout", middleware.isLoggedIn, function(req,res){
+   res.render("trending/edit"); 
+});
+
+//Puts into trending post to edit - Admin only
+router.put("/shoutout", middleware.isLoggedIn, function(req,res){
+    res.redirect("trending/index");
+})
 
 module.exports = router;
