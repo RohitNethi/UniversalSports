@@ -1,6 +1,8 @@
 var mongoose    = require('mongoose'),
     Contact     = require('./models/contact.js'),
     Member      = require('./models/member'),
+    Shoutout    = require('./models/shoutout'),
+    Admin       = require('./models/admin'),
     contactdata        = [{
         email: "snethi@uncc.edu",
         relationship: "Parent",
@@ -31,6 +33,11 @@ var mongoose    = require('mongoose'),
     Age:         '23',
     Phone:       '7044925393',
     birthday:    '09-22-1994'
+    }],
+    shoutoutdata = [{
+        title: 'Amazing new event!',
+        message: 'Come join us at Universal Sports to take part in our giveaway',
+        image:  'media/img/byron_ruff-1.jpg'
     }]
     
     function seedDB(){
@@ -73,8 +80,44 @@ var mongoose    = require('mongoose'),
             });
      }
     });
+    Shoutout.remove({},function(err){
+      if(err){
+          console.log("error");
+      } 
+     else{
+          console.log("Removed all shoutouts");
+          //Adding a few campgrounds
+            shoutoutdata.forEach(function(seed){
+                Shoutout.create(seed,function(err,shoutout){
+                    if(err){
+                        console.log(err);
+                    }
+                    else{
+                        console.log(shoutout);
+                    }
+                });
+            });
+     }
+    });
+    Admin.remove({},function(err){
+      if(err){
+          console.log("error");
+      } 
+     else{
+          console.log("Removed all admins");
+            var admin  = new Admin({username: 'ByronRuff'});
+            var password = 'univsports2018';
+            Admin.register(admin, password, function(err, admin){
+            if(err){
+                console.log(err);
+             }
+             else{
+                 console.log(admin);
+             }
+     });
     
 }
     //Adding comments
-
+});
+}
 module.exports = seedDB;

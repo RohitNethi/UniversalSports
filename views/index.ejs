@@ -1,7 +1,12 @@
 <% include partials/header %>
+<script>
+    document.title = "Universal Sports";
+</script>
 
 <!-----------------Header---------------------->
-
+        <header>
+          <% include partials/landing %>
+        </header>
     <!--<div class="container">-->
         <div class="row">
             <div class="landing-header col-10 offset-1" id="id-landing-header">
@@ -34,121 +39,228 @@
                 <div class="col-10 offset-1">
                     <div class="row">
                         <!--Sports-->
-                        <div class="col-4">
+                        <div class="col-md-4 services">
                             <div class="sports">
                                 <h3>Sports</h3>
                             </div>
                             <!--Modal trigger button-->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sportsContent">
-                              Know More
-                            </button>
-                            <!--Modal Content-->
-                            <div class="modal fade" id="sportsContent" tabindex="-1" role="dialog" aria-labelledby="Sports" aria-hidden="true">
-                              <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="modalTitle">Sports</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <ul>
-                                    	<li>&#9654; &nbsp; Track & Field</li>
-                                    	<li>&#9654; &nbsp; Basketball</li>
-                                    	<li>&#9654; &nbsp; Baseball/Softball</li>
-                                    	<li>&#9654; &nbsp; Tennis</li>
-                                    	<li>&#9654; &nbsp; Football</li>
-                                    	<li>&#9654; &nbsp; Volleyball</li>
-                                    	<li>&#9654; &nbsp; Wrestling</li>
-                                    	<li>&#9654; &nbsp; Cheerleading</li>
-                                    	<li>&#9654; &nbsp; Gymnastics</li>
-                                    	<li>&#9654; &nbsp; Martial Arts</li>
-                                    	<li>&#9654; &nbsp; Lacrosse</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
+                            <div class="know-more">
+                              <button type="button" class="btn-ghost" data-toggle="modal" data-target="#sportsContent">
+                                Know More
+                              </button>
                             </div>
                         </div>
+                        <!--Modal Content-->
+                        <div class="modal fade" id="sportsContent" tabindex="-1" role="dialog" aria-labelledby="Sports" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle">Sports</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                	<li>&#9724; &nbsp; Track & Field</li>
+                                	<li>&#9724; &nbsp; Basketball</li>
+                                	<li>&#9724; &nbsp; Baseball/Softball</li>
+                                	<li>&#9724; &nbsp; Tennis</li>
+                                	<li>&#9724; &nbsp; Football</li>
+                                	<li>&#9724; &nbsp; Volleyball</li>
+                                	<li>&#9724; &nbsp; Wrestling</li>
+                                	<li>&#9724; &nbsp; Cheerleading</li>
+                                	<li>&#9724; &nbsp; Gymnastics</li>
+                                	<li>&#9724; &nbsp; Martial Arts</li>
+                                	<li>&#9724; &nbsp; Lacrosse</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <!--Programming-->
-                        <div class="col-4">
+                        <div class="col-md-4 services">
                             <div class="pgm">
                                 <h3>Programming</h3>
                             </div>
                             <!--Modal trigger button-->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pgmContent">
-                              Know More
-                            </button>
-                            <!--Modal Content-->
-                            <div class="modal fade" id="pgmContent" tabindex="-1" role="dialog" aria-labelledby="Programming" aria-hidden="true">
-                              <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="modalTitle">Programming</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <ul>
-                                    	<li>Mental Health Assessments and Treatment</li>
-                                    	<li>Counseling</li>
-                                    	<li>Mentoring</li>
-                                    	<li>Higher Education Preparation (SAT/ACT Prep)</li>
-                                    	<li>Tutoring</li>
-                                    	<li>Public Speaking Coaching</li>
-                                    	<li>Finance and Investment Education</li>
-                                    	<li>Advocacy Programming and Internships Targeting Minorities and Women In Technology, Education and Entrepreneurship</li>
-                                    	<li>Character Development With Targeted Focus On Integrity, Sportsmanship and Leadership</li>
-                                    </ul>
-                                  </div>
-                                </div>
+                            <div class="know-more">
+                              <button type="button" class="btn-ghost" data-toggle="modal" data-target="#pgmContent">
+                                Know More
+                              </button>
+                            </div>
+                          </div>
+                        <!--Modal Content-->
+                        <div class="modal fade" id="pgmContent" tabindex="-1" role="dialog" aria-labelledby="Programming" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle">Programming</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                	<li>&#9724; &nbsp; Mental Health Assessments and Treatment</li>
+                                	<li>&#9724; &nbsp; Counseling</li>
+                                	<li>&#9724; &nbsp; Mentoring</li>
+                                	<li>&#9724; &nbsp; Higher Education Preparation (SAT/ACT Prep)</li>
+                                	<li>&#9724; &nbsp; Tutoring</li>
+                                	<li>&#9724; &nbsp; Public Speaking Coaching</li>
+                                	<li>&#9724; &nbsp; Finance and Investment Education</li>
+                                	<li>&#9724;&nbsp; Advocacy Programming and Internships Targeting Minorities and Women In Technology, Education and Entrepreneurship</li>
+                                	<li>&#9724;&nbsp;Character Development With Targeted Focus On Integrity, Sportsmanship and Leadership</li>
+                                </ul>
                               </div>
                             </div>
+                          </div>
                         </div>
+                        
                         <!--Fitness-->
-                        <div class="col-4">
+                        <div class="col-md-4 services">
                             <div class="fitness">
-                                <h3>Fitness</h3>
+                                <h3>Fitness & Nutrition</h3>
                             </div>
                             <!--Modal trigger button-->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fitnessContent">
-                              Know More
-                            </button>
-                            <!--Modal Content-->
-                            <div class="modal fade" id="fitnessContent" tabindex="-1" role="dialog" aria-labelledby="Fitness" aria-hidden="true">
-                              <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="modalTitle">Fitness</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
-                                  </div>
-                                  <div class="modal-body">
-                                    blah
-                                  </div>
-                                </div>
+                            <div class="know-more">
+                              <button type="button" class="btn-ghost" data-toggle="modal" data-target="#fitnessContent">
+                                Know More
+                              </button>
+                            </div>
+                        </div>
+                        <!--Modal Content-->
+                        <div class="modal fade" id="fitnessContent" tabindex="-1" role="dialog" aria-labelledby="Fitness" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle">Fitness & Nutrition</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <ul>
+                                	<li>&#9724; &nbsp; Individual/Group Sports Performance Training</li>
+                                	<li>&#9724; &nbsp; Nutrition Coaching</li>
+                                	<li>&#9724; &nbsp; Healthy Lifestyle Guidance and Assistance</li>
+                                	<li>&#9724; &nbsp; Massage Therapy</li>
+                                	<li>&#9724; &nbsp; Physical Therapy</li>
+                                	<li>&#9724; &nbsp; Healthy Foods, Snacks and Drinks Onsite</li>
+                                </ul>
                               </div>
                             </div>
+                          </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    </div>
 <!-----------------Testimonials---------------------->
-
+  <section class="section-testimonials">
+    <div class="testimonials container" id="id-testimonials">
+      <h2>Success Stories</h2>
+      <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active row">
+            <div class="col-8 offset-2">
+              <blockquote>
+                I say with great conviction that Mr. Ruff has no doubt impacted my son’s life. 
+                Mr. Ruff is very relevant today in the lives of the young men that he encounters
+                . Because of Mr. Ruff’s influence, my son continues to show positive growth and 
+                maturity, and he is extremely motivated and passionate about excelling in the next
+                phase of his life.
+                <cite><img class="cite-img">&mdash; Dale B. Gordon</cite>
+              </blockquote>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-8 offset-2 row">
+              <blockquote>
+                What I appreciate most about Byron is that he truly cares about the young men 
+                that he trains and mentors. He makes himself available and checks in with them 
+                regularly via phone and email. He also keeps in contact with the parents, checking 
+                in on grades, and how the young men are doing in general.
+                <cite><img class="cite-img">&mdash; Kirk Augustus</cite>
+              </blockquote>
+            </div>
+          </div>
+          <div class="carousel-item row">
+            <div class="col-8 offset-2">
+              <blockquote>
+                I am glad to say that a few weeks ago that my son signed a D-1 national letter of 
+                intent with Byron right there by his side. He has been patient but challenging. He has pushed my son and
+                called him out on things as well. This man is solid and has a great track
+                record when it comes to working with student athletes.
+                <cite><img class="cite-img">&mdash; Dr. Ernest E. Jeffries</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
 <!-----------------Subscription---------------------->
+    <section class="section-subscription">
+      <div class="subscription container" id="id-subscription">
+        <h2>Join Universal Sports</h2>
+        <div class="row">
+          <div class="col-md-3 offset-md-3 sub">
+            <h3><i class="ion-ios-people"></i></h3>
+            <p>Looking for a Sports Performance Trainer? Start your training today! </p>
+            <button type="button" class="btn-ghost join" data-toggle="modal" data-target="#join">
+              Join now!
+            </button>
+          </div>
+          <div class="modal fade" id="join" tabindex="-1" role="dialog" aria-labelledby="Join Now" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="join">Join Now!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Request more information on how to join by emailing <a href="mailto:universalsportsllc@gmail.com" 
+                    target="_blank">universalsportsllc@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3  sub">
+            <h3>
+              <!-- PayPal Logo -->
+              <img src="/media/favicons/paypal.jpg" border="0" alt="PayPal Logo">
+            </h3>
+            <p>To better serve our clients, we now accept payments online.</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="KY3Q8VBVDVGFC">
+              <input type="submit" type="submit" value="Make a payment" name="submit" 
+              title="PayPal - The safer, easier way to pay online!" class="btn-ghost pay">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-<!-----------------Instagram---------------------->
-    <div class="space">
-        
-    </div>
-    </div>
 
 <% include partials/footer %>

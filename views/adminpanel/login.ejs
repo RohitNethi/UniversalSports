@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">       
+        <meta name="description" content="Universal Sports is a company that focuses on the holistic approach of developing athletes by enhancing and empowering the student athlete emotionally, physically, spiritually and intellectually.">
+        
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway:300,400,500,700,900" rel="stylesheet">
+        <!--Icons-->
+        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <!--Main stylesheet-->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/queries.css">
+        
+      
+        <!--Title-->
+        <title>Universal Sports</title>
+    </head>
+    <body>
+        <div class="container">
+                <% if(success && success.length>0){ %>
+                <div class="alert alert-success" role="alert">
+                    <%= success %>
+                </div>
+                <% } %>
+                <% if(error && error.length>0){ %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+                <% } %>
+            </div>
+        <div class="container">
+            <h2>Admin Panel</h2>
+            <div class="login">
+                <h3>Login</h3>
+                <form action="/admin/login" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="JohnDoe" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="**********" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -9,4 +9,14 @@ var nodemailer = require('nodemailer'),
     }
 });
 
+middlewareObj.isLoggedIn = function(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    else{
+        req.flash("error", "Login first!");
+        res.redirect("/admin/login");
+    }
+}
+
 module.exports = middlewareObj;

@@ -9,6 +9,6 @@ $(document).ready(function() {
           $('nav').removeClass('sticky');
       } 
     }, {
-        offset: '-500px;'
+        offset: '-300px;'
     });
 }); 

@@ -1,0 +1,147 @@
+// 767
+@media only screen and (max-width:767px) {
+    
+/*---Navbar background---*/
+
+    .navbar-collapse {
+        background-color: #fff; 
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited,{
+        border: 0;
+    }
+    .main-nav li a:hover,    
+    .main-nav li a:active,
+    .sticky .main-nav li a:hover,    
+    .sticky .main-nav li a:active{
+        color: $logo-blue;
+    }
+    
+    .main-nav li:hover,
+    .main-nav li:active {
+        border: 0;
+    }
+    
+// Landing Header
+
+    .landing-header {
+        top: 50%;
+        
+        h1 {
+            font-size: 200%;
+        }
+    }
+    
+
+//     Services
+    
+    .section-services {
+        
+        h3 {
+            font-size: $headings-default-size*.7;
+        }
+        
+        .sports,
+        .pgm, 
+        .fitness {
+            height: 250px;
+            width: 250px;
+            margin: 0 auto;
+        }
+        
+        .know-more {
+            width: 250px;
+            margin: 20px auto 40px auto;
+        }
+    }
+
+
+//    Subscription
+
+    .section-subscription {
+        .modal-body {
+            font-size: 90%;
+        }
+    }
+    
+// Trending
+
+    .section-shoutouts,
+    .section-info,
+    .section-instagram {
+        padding-left: 5%;
+        padding-right: 5%;
+        
+        h2{
+            margin: 10px auto;
+        }
+        
+        .shoutout-content {
+            margin-bottom: 20px;
+        }
+    }
+    
+        
+//    About Us
+    
+    .about-header {
+        h1 {
+            font-size: $headings-default-size*1.4;
+        }
+    }
+
+    .section-byron-ruff {
+        h2{
+            margin: 10px auto;
+        }
+        .content {
+            margin: 20px auto 0 auto;;
+            padding: 0 30px;
+        }
+    }
+    
+    .section-mission-vision {
+        h2 {
+            margin: 10px 0;
+        }
+        .our-mission-vision-content{            
+            margin: 20px auto 40px auto;
+            padding: 0 30px;
+        }
+    }
+    
+//    Footer
+    
+    .contact-us {
+        h2 {
+            margin: 20px auto;
+        }
+        
+        button {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    
+    .footer-social {
+        border: none;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-location {
+        padding: auto;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        
+        .copyright,
+        .credit {
+            text-align: center;
+            margin: 10px auto;
+        }
+    }
+
+}

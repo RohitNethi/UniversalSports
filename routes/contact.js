@@ -4,7 +4,7 @@ var express     = require('express'),
     middleware  = require('../middleware/middleware'),
     Contact     = require('../models/contact');
 
-router.post("/contact", function(req,res){
+router.post("/", function(req,res){
     var contact = {
         email: req.body.person.email,
         relationship: req.body.person.relationship,
@@ -12,10 +12,10 @@ router.post("/contact", function(req,res){
     }
     Contact.create(contact,function(err,newPerson){
         if(err){
-            console.log("error");
+            req.flash("error", "Failed to send email: "+ err.message);
+            res.redirect("/");
         }
         else{
-            console.log("success");
             var mailOptions = {
             from: 'beyrohit@gmail.com', // sender address
             to: "beyrohit@gmail.com", // list of receivers
@@ -26,16 +26,19 @@ router.post("/contact", function(req,res){
             // send mail with defined transport object
             middleware.transporter.sendMail(mailOptions, function(error, info){
                 if (error) {
-                    console.log(error);
+                    req.flash("error", error.message);
+                    res.redirect("/");
                 }
                 else{
-                    console.log("Successfully mailed");
+                    req.flash("success","Message sent successfully!");
+                    res.redirect("/");
                 }
                 });
             }
             
         });
-        res.send(contact);
+        req.flash("success","Message sent successfully!");
+        res.redirect("/");
     });
     
 module.exports = router;
