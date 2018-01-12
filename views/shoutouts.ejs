@@ -1,0 +1,72 @@
+<% include partials/header %>
+<script>
+    document.title = "Trending - Universal Sports";
+</script>
+
+    <!--Header-->
+    <div class="about-header row">
+        <h1 class="col-8 offset-2">Trending</h1>
+    </div>
+    
+    <div class="trending-container">
+    
+    <!--Trending-->
+    <!--<div class="container"> -->
+    <!--    <div class="trending">-->
+    <!--        <span class="trending-icon"><img src="/media/favicons/trending.png">Hot</span>-->
+    <!--    </div>-->
+    <!--</div>-->
+    
+    <!--Shoutouts-->
+    <section class="section-shoutouts">
+        <div class="shoutouts" id="id-shoutouts">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2>Shout out!</h2>
+                    <div class="shoutout-img" id="id-shoutout-img">
+                        <img src="<%= shoutout[0].image %>" class="img-fluid">
+                    </div>
+                    <div class="shoutout-content" id="id-shoutout-content">
+                        <%= shoutout[0].message %>
+                    </div>
+                    <% if(currentUser){ %>
+                <a href="/shoutouts/<%= shoutout[0]._id %>/edit" class="btn btn-warning">Edit</a>
+            <% } %>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!--Information-->
+    <section class="section-info">
+        <div class="info" id="id-info">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2>Information!</h2>
+                    <div class="info-content" id="id-info-content">
+                        <b>Jan 20</b> - UNC Charlotte application<br>
+                        <b>Feb 2</b> - PSAT results<br>
+                        <b>Mar 17</b> - Georgia Tech recruiting camp<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Instagram Feed-->
+    <section class="section-instagram">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="row">
+                    <div class="instagram col-6" id="id-instagram">
+                        Instagram feed here!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </div>
+
+<% include partials/footer %>

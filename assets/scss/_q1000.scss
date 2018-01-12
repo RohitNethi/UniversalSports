@@ -1,0 +1,23 @@
+// 1000
+@media only screen and (max-width:1000px) {
+
+    // Services
+    .section-services {
+        .sports,
+        .pgm,
+        .fitness {
+            height: 170px;
+            width: 170px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: $headings-default-size*.5;
+        }
+        
+        .know-more {
+            width: 170px;
+        }
+    }
+    
+}

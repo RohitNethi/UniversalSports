@@ -1,0 +1,17 @@
+
+// 568
+@media only screen and (max-width:568px) {
+    
+    // Navigation
+    .sticky .navbar-brand:after {
+        content: "";
+    }
+    
+    // About Us
+    
+    .about-header {
+        h1 {
+            font-size: $headings-default-size;
+        }
+    }
+}

@@ -33,10 +33,25 @@
                 <% } %>
             </div>
         <div class="container">
-            <h3>Welcome, <%= currentUser.username %>!</h3>
-        </div>    
-        <a href="/shoutouts" class="btn btn-default">Shoutouts</a>
-        <a href="/members" class="btn btn-default">Members</a>
-
+            <h2>Edit Shoutout</h2>
+            <div class="login">
+                
+                <form action="/shoutouts/<%= shoutout._id %>?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" value="<%= shoutout.title %>" name="shoutout[title]">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <input type="textarea" class="form-control" id="message" value="<%= shoutout.message %>" name="shoutout[message]">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="text" class="form-control" id="image" value="<%= shoutout.image %>" name="shoutout[image]">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+        </div>
     </body>
 </html>

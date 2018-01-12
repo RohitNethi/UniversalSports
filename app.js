@@ -3,17 +3,19 @@ var express         = require("express"),
     bodyParser      = require("body-parser"),
     mongoose        = require('mongoose'),
     app             = express(),
+    Admin           = require('./models/admin.js'),
+    Member          = require('./models/member.js'),
     nodemailer      = require('nodemailer'),
-    Member          = require('./models/member'),
-    Admin           = require('./models/admin'),
     flash           = require('connect-flash'),
     passport        = require('passport'),
     seedDB          = require('./seeds'),
     sanitizer       = require('express-sanitizer'),
     LocalStrategy   = require('passport-local'),
+    methodOverride  = require('method-override'),
     transporter     = require('./middleware/middleware');
 
 mongoose.connect("mongodb://localhost/universalsports");
+app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static("assets"));
@@ -59,13 +61,13 @@ app.get("/about", function(req,res){
 
 //Routes 
 var contactRoutes = require('./routes/contact'),
-    trendingRoutes = require('./routes/trending');
-    //adminRoutes = require('./routes/admin');
+    shoutoutRoutes = require('./routes/shoutouts'),
+    adminRoutes = require('./routes/admin');
 
 
 app.use("/contact", contactRoutes);
-//app.use("/admin", adminRoutes);
-app.use("/trending", trendingRoutes);
+app.use("/admin", adminRoutes);
+app.use("/shoutouts", shoutoutRoutes);
 
 
 //Listen
