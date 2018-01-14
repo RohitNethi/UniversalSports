@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "scss": "node-sass ./assets/scss -o ./assets/css",
     "scss:watch": "npm run scss && node-sass ./assets/scss -wo ./assets/css",
     "test": "echo \"Error: no test specified\" && exit 1"
