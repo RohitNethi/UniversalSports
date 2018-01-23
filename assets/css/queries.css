@@ -18,11 +18,25 @@
 
 @media only screen and (max-width: 767px) {
   /*---Navbar background---*/
+  /*-----------Mobile Navigation-----------------------------*/
+  .logo, .sticky .navbar-brand img {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .sticky .navbar-brand img {
+    margin-left: 40px; }
   .navbar-collapse {
-    background-color: #fff; }
+    background-color: #ccc;
+    text-align: center; }
+  .main-nav {
+    height: 200px; }
+  .main-nav-toggle {
+    background-color: black; }
   .main-nav li a:link,
   .main-nav li a:visited {
-    border: 0; }
+    border: 0;
+    color: #fff; }
   .main-nav li a:hover,
   .main-nav li a:active,
   .sticky .main-nav li a:hover,
@@ -31,10 +45,20 @@
   .main-nav li:hover,
   .main-nav li:active {
     border: 0; }
+  .hidden-sm {
+    display: none; }
+  .hidden-md {
+    display: block; }
+  .sticky .hidden-md {
+    display: block; }
+  .sticky .sticky-header {
+    display: none; }
+  .sticky .hidden-sm {
+    display: none; }
   .landing-header {
     top: 50%; }
     .landing-header h1 {
-      font-size: 200%; }
+      font-size: 250%; }
   .section-services h3 {
     font-size: 28px; }
   .section-services .sports,
@@ -48,6 +72,9 @@
     margin: 20px auto 40px auto; }
   .section-subscription .modal-body {
     font-size: 90%; }
+  .trending-header h1 {
+    font-size: 56px;
+    margin-top: 30%; }
   .section-shoutouts,
   .section-info,
   .section-instagram {
@@ -56,13 +83,19 @@
     .section-shoutouts h2,
     .section-info h2,
     .section-instagram h2 {
-      margin: 10px auto; }
+      margin: 10px auto;
+      text-align: center; }
     .section-shoutouts .shoutout-content,
     .section-info .shoutout-content,
     .section-instagram .shoutout-content {
       margin-bottom: 20px; }
+    .section-shoutouts #instafeed,
+    .section-info #instafeed,
+    .section-instagram #instafeed {
+      text-align: center; }
   .about-header h1 {
-    font-size: 56px; }
+    font-size: 56px;
+    margin-top: 30%; }
   .section-byron-ruff h2 {
     margin: 10px auto; }
   .section-byron-ruff .content {
@@ -91,7 +124,9 @@
     margin: 10px auto; } }
 
 @media only screen and (max-width: 568px) {
-  .sticky .navbar-brand:after {
-    content: ""; }
+  .hidden-xs {
+    display: none; }
+  .hidden-sm {
+    display: none; }
   .about-header h1 {
     font-size: 40px; } }

@@ -102,11 +102,38 @@ h4 {
 /*-------------Navigation----------*/
 /*---------------------------------*/
 .logo {
-  height: 50px;
-  margin-left: 40px; }
+  height: 80px;
+  margin-left: 40px;
+  margin-top: 10px;
+  position: absolute;
+  top: 0; }
 
-.navigation i {
+.sticky .navbar-brand img {
+  height: 80px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 150px; }
+
+.navbar {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 0;
+  padding-right: 0; }
+
+.navigation {
+  z-index: 999; }
+
+.ion-navicon-round {
   color: #fff;
+  font-size: 200%;
+  z-index: 999; }
+
+.ion-close-round {
+  color: #231f20;
   font-size: 200%; }
 
 .navbar li a:hover {
@@ -115,6 +142,9 @@ h4 {
 .main-nav {
   height: 60px;
   background-color: rgba(255, 255, 255, 0); }
+
+.sticky-header {
+  display: none; }
 
 .main-nav li {
   margin: 10px 40px 10px 0px;
@@ -138,6 +168,12 @@ h4 {
   margin-bottom: 5px;
   border-bottom: 2px solid #4ebfe5; }
 
+.hidden-md {
+  display: none; }
+
+.hidden-sm {
+  display: block; }
+
 /*-----------Sticky Nav-----------------------------*/
 .sticky {
   position: fixed;
@@ -152,14 +188,13 @@ h4 {
   .sticky i {
     color: #000;
     font-size: 200%; }
-
-.sticky .navbar-brand:after {
-  margin: 10px auto 10px 20px;
-  font-family: "Raleway", sans-serif;
-  font-size: 120%;
-  font-weight: 100;
-  content: "Universal Sports";
-  color: #000; }
+  .sticky .sticky-header {
+    display: block; }
+  .sticky .hidden-md {
+    display: none;
+    margin-top: 30px; }
+  .sticky .hidden-sm {
+    display: block; }
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
@@ -175,13 +210,15 @@ h4 {
 header {
   height: 100vh;
   position: relative;
-  z-index: -1;
+  z-index: -10;
   background-color: #231f20;
   margin-top: 3px; }
 
 .landing-header {
   position: absolute;
   top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   color: #fff;
   text-align: center; }
   .landing-header h3 {
@@ -189,12 +226,14 @@ header {
     font-weight: 500;
     margin: 10px auto;
     text-shadow: 0 1px 0 #000;
-    font-family: "Raleway", sans-serif; }
+    font-family: "Raleway", sans-serif;
+    text-align: center; }
   .landing-header h1 {
     font-size: 68px;
     text-transform: uppercase;
     text-shadow: 0 1px 1px #000;
-    font-family: "Raleway", sans-serif; }
+    font-family: 'Alfa Slab One', sans-serif;
+    text-align: center; }
   .landing-header .blue {
     color: #4ebfe5; }
   .landing-header .grey {
@@ -207,7 +246,7 @@ header {
   height: 100vh;
   z-index: 0;
   list-style: none;
-  margin: -80px;
+  margin-top: -80px;
   padding: 0; }
   .slideshow li {
     width: 100%;
@@ -223,7 +262,7 @@ header {
     animation: imageAnimation 20s linear infinite; }
 
 .slideshow li:nth-child(1) {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/img/header/1.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/img/header/aboutus.jpg); }
 
 .slideshow li:nth-child(2) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/img/header/2.jpg);
@@ -234,7 +273,7 @@ header {
   animation-delay: 8s; }
 
 .slideshow li:nth-child(4) {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/img/header/4.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/img/header/1.jpg);
   animation-delay: 12s; }
 
 .slideshow li:nth-child(5) {
@@ -405,18 +444,16 @@ header {
 /*---------------------------------*/
 /*--------About Us Stylesheet------*/
 /*---------------------------------*/
-.about-header {
+.about-header, .trending-header {
   height: 50vh;
   width: 100%;
   z-index: 0;
   margin: -80px 0 auto 0;
-  padding-top: 80px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/bg/football.jpg);
-  background-position: bottom;
-  background-attachment: fixed; }
-  .about-header h1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/bg/img-track.jpg) center fixed;
+  background-size: cover; }
+  .about-header h1, .trending-header h1 {
     font-size: 68px;
-    margin-top: 5%;
+    margin-top: 7%;
     color: #fff;
     text-shadow: 0 1px 1px #000;
     text-transform: none; }
@@ -491,6 +528,10 @@ header {
 /*---------------------------------*/
 /*--------Trending Stylesheet------*/
 /*---------------------------------*/
+.trending-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/bg/football.jpg) bottom fixed;
+  background-size: cover; }
+
 .section-shoutouts .shoutout-img img {
   box-shadow: 0 2px 2px #000;
   max-height: 250px; }
@@ -501,6 +542,15 @@ header {
 .section-instagram {
   margin-top: 30px;
   padding-bottom: 100px; }
+  .section-instagram .instaimg img {
+    margin-bottom: 20px;
+    height: 260px;
+    width: 260px;
+    box-shadow: 0 2px 2px #555; }
+  .section-instagram .instaimg img:hover {
+    opacity: 0.8; }
+  .section-instagram .instaimg h2 {
+    text-align: center; }
 
 /*---------------------------------*/
 /*--------------Footer-------------*/

@@ -141,12 +141,45 @@ h4 {
 /*---------------------------------*/
 
 .logo {
-    height: 50px;
+    height: 80px;
     margin-left: 40px;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
 }
 
-.navigation i {
+.sticky .navbar-brand {
+    img {
+        height: 80px;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 0;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 150px;
+    }
+}
+
+.navbar {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navigation{
+    z-index: 999;
+} 
+
+.ion-navicon-round {
     color: #fff;
+    font-size: 200%;
+    z-index: 999;
+}
+
+.ion-close-round {
+    color: $logo-dark;
     font-size: 200%;
 }
 
@@ -157,6 +190,11 @@ h4 {
 .main-nav {
     height: 60px;
     background-color: rgba(255, 255, 255, 0);
+    
+}
+
+.sticky-header {
+    display: none;
 }
 
 .main-nav li {
@@ -185,7 +223,15 @@ h4 {
     border-bottom: 2px solid $logo-blue;
 }
 
+.hidden-md {
+    display: none;
+}
+.hidden-sm {
+    display: block;
+}
+
 /*-----------Sticky Nav-----------------------------*/
+
 .sticky {
     position: fixed;
     top: 0;
@@ -201,15 +247,16 @@ h4 {
         color: #000;
         font-size: 200%;
     }
-}
-
-.sticky .navbar-brand:after {
-    margin: 10px auto 10px 20px;
-    font-family: $headings-font;
-    font-size: 120%;
-    font-weight: 100;
-    content: "Universal Sports";
-    color: #000;
+    .sticky-header {
+        display: block;
+    }
+    .hidden-md {
+        display: none;
+        margin-top: 30px;
+    }
+    .hidden-sm {
+        display: block;
+    }
 }
 
 .sticky .main-nav li a:link,
@@ -230,7 +277,7 @@ h4 {
 header {
     height: 100vh;
     position: relative;
-    z-index: -1;
+    z-index: -10;
     background-color: $logo-dark;
     margin-top: 3px;
 }
@@ -239,6 +286,8 @@ header {
     
     position: absolute;
     top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     color: #fff;
     text-align: center;
     
@@ -248,14 +297,17 @@ header {
         margin: 10px auto;
         text-shadow: 0 1px 0 #000;
         font-family: $content-font;
+        text-align: center;
     }
     
     h1 {
         font-size: $headings-default-size * 1.7;
         text-transform: uppercase;
         text-shadow: 0 1px 1px #000;
-        font-family: $content-font;
+        font-family: 'Alfa Slab One', sans-serif;
+        text-align: center;
     }
+    
     
     .blue {
         color: $logo-blue;
@@ -275,7 +327,7 @@ header {
     height: 100vh;
     z-index: 0;
     list-style: none;
-    margin: -80px;
+    margin-top: -80px;
     padding: 0;
   
     li {
@@ -294,7 +346,7 @@ header {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/img/header/1.jpg) 
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../media/img/header/aboutus.jpg) 
 }
 .slideshow li:nth-child(2) { 
   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/img/header/2.jpg);
@@ -305,7 +357,7 @@ header {
   animation-delay: 8s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/img/header/4.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/img/header/1.jpg);
   animation-delay: 12s; 
 }
 .slideshow li:nth-child(5) { 
@@ -558,14 +610,13 @@ header {
     width: 100%;
     z-index: 0;
     margin: -80px 0 auto 0;
-    padding-top: 80px;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/bg/football.jpg);
-    background-position: bottom;
-    background-attachment: fixed;
-    
+    // padding-top: 80px; 
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../media/bg/img-track.jpg) center fixed;
+    background-size: cover;
+
     h1 {
         font-size: $headings-default-size*1.7;
-        margin-top: 5%;
+        margin-top: 7%;
         color: #fff;
         text-shadow: 0 1px 1px #000;
         text-transform: none;
@@ -647,6 +698,7 @@ header {
 
     .us-photo {
         width: 100%;
+        // height: 270px;
         margin: 0;
         overflow: hidden;
     }
@@ -684,19 +736,11 @@ header {
 /*---------------------------------*/
 /*--------Trending Stylesheet------*/
 /*---------------------------------*/
-
-
-// .trending{
-//     .trending-icon{
-//         color:red;
-//         font-size: 1.5em;
-//     }
-//     .trending-icon img{
-//         width:30px;
-//         height:30px;
-//     }
-    
-// }
+.trending-header {
+    @extend .about-header;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../media/bg/football.jpg) bottom fixed;
+    background-size: cover;
+}
 
 .trending-container {
     @extend .about-us;
@@ -716,6 +760,24 @@ header {
 .section-instagram {
     margin-top: 30px;
     padding-bottom: 100px;
+    
+    .instaimg {
+        
+        img {
+            margin-bottom: 20px;
+            height: 260px;
+            width: 260px;
+            // border: 1px solid #fff;
+            box-shadow: 0 2px 2px #555;
+        }
+        img:hover {
+            opacity: 0.8;
+        }
+        h2 {
+            text-align: center;
+        }
+    }
+    
 }
 
 

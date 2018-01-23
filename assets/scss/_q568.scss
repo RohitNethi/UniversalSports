@@ -2,11 +2,12 @@
 // 568
 @media only screen and (max-width:568px) {
     
-    // Navigation
-    .sticky .navbar-brand:after {
-        content: "";
+.hidden-xs {
+    display: none;
+}
+     .hidden-sm {
+        display: none;
     }
-    
     // About Us
     
     .about-header {

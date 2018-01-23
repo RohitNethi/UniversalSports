@@ -6,7 +6,7 @@
         <meta name="description" content="Universal Sports is a company that focuses on the holistic approach of developing athletes by enhancing and empowering the student athlete emotionally, physically, spiritually and intellectually.">
         
         <!--Fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway:300,400,500,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway:300,400,500,700,900|Alfa+Slab+One:400" rel="stylesheet">
         <!--Icons-->
         <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
         <!--Bootstrap-->
@@ -30,14 +30,19 @@
         
         <!--        Navigation-->
         <div class="navigation  js--section-sticky">
-            <nav class="navbar navbar-expand-md">
-                <button type="button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+            <nav class="navbar navbar-expand-md" id="nav">
+                <a href="/" class="navbar-brand"><img src="media/favicons/android-chrome-192x192.png" class="logo" alt="Logo"></a>
+                <button type="button" class="navbar-toggler js--nav-icon" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
                     <span class="sr-only">Toggle Navigation</span>
                         <i class="ion-navicon-round"></i>
                 </button>
-                <a href="/" class="navbar-brand"><img src="/media/favicons/android-chrome-192x192.png" class="logo" alt="Logo"></a>
+                
                 <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav main-nav js--main-nav sticky-header" id="js--main-nav">
+                        <li class="nav-item"><a href="/" class="nav-link">Universal Sports</a></li>
+                    </ul>
                     <ul class="navbar-nav ml-auto main-nav js--main-nav" id="js--main-nav">
+                        <li class="nav-item hidden-md"><a href="/" class="nav-link">Universal Sports</a></li>
                         <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="/shoutouts" class="nav-link">Trending</a></li>
                     </ul>
@@ -46,15 +51,15 @@
         </div>
         
         <div class="container message-alert">
-                <% if(success && success.length>0){ %>
-                <div class="alert alert-success" role="alert">
-                    <%= success %>
-                </div>
-                <% } %>
-                <% if(error && error.length>0){ %>
-                <div class="alert alert-danger" role="alert">
-                    <%= error %>
-                </div>
-                <% } %>
+            <% if(success && success.length>0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
             </div>
+            <% } %>
+            <% if(error && error.length>0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+            <% } %>
+        </div>
 

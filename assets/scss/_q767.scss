@@ -2,14 +2,39 @@
 @media only screen and (max-width:767px) {
     
 /*---Navbar background---*/
+    
+    
+/*-----------Mobile Navigation-----------------------------*/
+
+    .logo {
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .sticky .navbar-brand {
+        img {
+            @extend .logo;
+            margin-left: 40px;
+        }
+    }
 
     .navbar-collapse {
-        background-color: #fff; 
+        background-color: #ccc;
+        text-align: center;
     }
     
+    .main-nav { 
+        height: 200px;
+    }
+    .main-nav-toggle {
+        background-color: black;
+    }
+
     .main-nav li a:link,
     .main-nav li a:visited,{
         border: 0;
+        color: #fff;
     }
     .main-nav li a:hover,    
     .main-nav li a:active,
@@ -23,13 +48,32 @@
         border: 0;
     }
     
+    .hidden-sm {
+        display: none;
+    }
+    .hidden-md {
+        display: block;
+    }
+    
+    .sticky{
+        .hidden-md {
+            display: block;
+        }
+        .sticky-header {
+            display: none;
+        }
+        .hidden-sm {
+            display: none;
+        }
+    }
+    
 // Landing Header
 
     .landing-header {
         top: 50%;
         
         h1 {
-            font-size: 200%;
+            font-size: 250%;
         }
     }
     
@@ -67,6 +111,13 @@
     
 // Trending
 
+    .trending-header {
+        h1 {
+            font-size: $headings-default-size*1.4;
+            margin-top: 30%;
+        }
+    }
+    
     .section-shoutouts,
     .section-info,
     .section-instagram {
@@ -75,10 +126,15 @@
         
         h2{
             margin: 10px auto;
+            text-align: center;
         }
         
         .shoutout-content {
             margin-bottom: 20px;
+        }
+        
+        #instafeed {
+            text-align: center;
         }
     }
     
@@ -88,6 +144,7 @@
     .about-header {
         h1 {
             font-size: $headings-default-size*1.4;
+            margin-top: 30%;
         }
     }
 

@@ -33,13 +33,14 @@ router.get("/:id/edit", middleware.isLoggedIn, function(req,res){
 });
 
 router.put("/:id", middleware.isLoggedIn, function(req,res){
-    
+    console.log(req.body.shoutout);
     Shoutout.findByIdAndUpdate(req.params.id, req.body.shoutout, function(err,updatedShoutout){
         if(err){
            req.flash("error",err);
             res.redirect("/shoutouts");
         }
         else{
+            console.log(updatedShoutout);
             req.flash("success", "Successfully updated Shoutout");
             res.redirect("/shoutouts");
         }
