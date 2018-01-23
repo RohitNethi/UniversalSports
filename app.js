@@ -14,7 +14,8 @@ var express         = require("express"),
     methodOverride  = require('method-override'),
     transporter     = require('./middleware/middleware');
 
-mongoose.connect("mongodb://localhost/universalsports");
+mongoose.connect("mongodb://rohitnethi:univsports201@ds255787.mlab.com:55787/universalsports");
+//mongoose.connect("mongodb://localhost/universalsports");
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
