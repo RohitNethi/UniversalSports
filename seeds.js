@@ -37,7 +37,7 @@ var mongoose    = require('mongoose'),
     shoutoutdata = [{
         title: 'Amazing new event!',
         message: 'Come join us at Universal Sports to take part in our giveaway',
-        image:  'media/img/byron_ruff-1.jpg'
+        image:  'media/img/album-5.jpg'
     }]
     
     function seedDB(){

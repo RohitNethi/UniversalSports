@@ -30,7 +30,7 @@
     background-color: #ccc;
     text-align: center; }
   .main-nav {
-    height: 200px; }
+    height: auto; }
   .main-nav-toggle {
     background-color: black; }
   .main-nav li a:link,
